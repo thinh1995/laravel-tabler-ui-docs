@@ -1,5 +1,5 @@
 def buildDockerImage() {
-    sh 'docker build . -f ${DOCKER_FILE} -t ${DOCKER_HUB}/${IMAGE_NAME}:${BUILD_NUMBER}'
+    sh 'docker build . -f ${DOCKER_FILE} -t ${DOCKER_HUB}/${IMAGE_NAME}:${BUILD_NUMBER} --target serve'
 }
 
 def pushDockerImage() {
