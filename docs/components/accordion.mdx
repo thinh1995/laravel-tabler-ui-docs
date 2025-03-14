@@ -1,0 +1,33 @@
+---
+sidebar_position: 3
+---
+# Accordion
+The accordion component allows users to expand or collapse sections of content. It’s commonly used to organize information in a compact, accessible way. Each section typically has a header that can be clicked to toggle the visibility of its associated content.
+
+```php
+@php
+    $items = [
+        [
+            'title' => 'What makes Tabler different from other UI frameworks?',
+            'body' => 'Tabler offers a modern, responsive design with a clean aesthetic, built on Bootstrap for ease of use and flexibility.'
+        ],
+        [
+            'title' => 'How can I customize Tabler components to fit my design needs?',
+            'body' => 'You can customize Tabler components using CSS variables, SCSS, and utility classes to match your design preferences.'
+        ]
+    ];
+@endphp
+
+<x-tabler-accordion :items="items" />
+```
+
+import AccordionPage from '../../src/components/TablerUIComponents/Accordion';
+
+<AccordionPage></AccordionPage>
+
+## Accordion Component
+| Option  | Default | Available Values                                                                                                                                                      |
+|---------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `items` | `[]`    | List items for accordion, it must be type array and each item must have two keys that `title` and `body`. Example: <br/>  `['title' => 'hello', 'body' => 'Welcome']` |
+| `flush` | `false` | Style flush for accordion                                                                                                                                             |
+| `tabs`  | `false` | Style tabs for accordion                                                                                                                                              |
